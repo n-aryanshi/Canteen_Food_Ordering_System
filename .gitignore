@@ -1,0 +1,25 @@
+# Ignore all .iml project files
+*.iml
+
+# Ignore Gradle build directories in any submodule (UserApp, AdminApp)
+**/build/
+**/.gradle/
+**/.externalNativeBuild/
+**/.cxx/
+
+# Ignore IDE project files from Android Studio / IntelliJ
+**/.idea/
+**/.idea/*
+
+# Ignore machine-specific settings
+**/local.properties
+
+# Ignore generated capture outputs (screenshots, screen recordings, etc.)
+**/captures/
+
+# Firebase config file (must be downloaded separately for each app)
+**/google-services.json
+
+# macOS system file
+.DS_Store
+

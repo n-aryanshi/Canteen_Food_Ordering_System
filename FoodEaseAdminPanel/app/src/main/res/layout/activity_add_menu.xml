@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMenuActivity">
+
+    <ScrollView
+        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/red"
+                android:outlineSpotShadowColor="@color/black"
+                android:src="@drawable/arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:text="Add Item"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/backBtn"
+                app:layout_constraintTop_toTopOf="@id/backBtn" />
+
+            <EditText
+                android:id="@+id/fooodName"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="1dp"
+                android:ems="15"
+                android:fontFamily="@font/yeonsung_regular"
+                android:hint="Enter Food Name"
+                android:inputType="text"
+                android:outlineSpotShadowColor="@color/red"
+                android:paddingLeft="12dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@id/textView"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@id/textView" />
+
+            <EditText
+                android:id="@+id/fooodPrice"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="1dp"
+                android:ems="15"
+                android:fontFamily="@font/yeonsung_regular"
+                android:hint="Enter Food Price"
+                android:inputType="text"
+                android:outlineSpotShadowColor="@color/red"
+                android:paddingLeft="12dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@id/fooodName"
+                app:layout_constraintStart_toStartOf="@id/fooodName"
+                app:layout_constraintTop_toBottomOf="@id/fooodName" />
+
+            <TextView
+                android:id="@+id/selectImage"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:drawableEnd="@drawable/add_with_circle"
+                android:elevation="1dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:paddingLeft="12dp"
+                android:text="Select Image"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@id/fooodPrice"
+                app:layout_constraintStart_toStartOf="@id/fooodPrice"
+                app:layout_constraintTop_toBottomOf="@id/fooodPrice" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/selectImage"
+                app:layout_constraintStart_toStartOf="@id/selectImage"
+                app:layout_constraintTop_toBottomOf="@id/selectImage">
+
+                <ImageView
+                    android:id="@+id/selectedImage"
+                    android:layout_width="125dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/addimage" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/foodDescText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:text="Short Description"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="1dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:hint="Put a short description"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:text=".\n.\n.\n.\n."
+                android:outlineSpotShadowColor="@color/red"
+                android:paddingLeft="12dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foodDescText" />
+
+            <TextView
+                android:id="@+id/foodIngredText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:text="Ingredients"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+            <EditText
+                android:id="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="1dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:hint="What are ingredients?"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:text=".\n.\n."
+                android:outlineSpotShadowColor="@color/red"
+                android:paddingLeft="12dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foodIngredText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AddItemButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/red_button_gradient"
+                android:fontFamily="@font/yeonsung_regular"
+                android:padding="2dp"
+                android:text="Add Item"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredients" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
